@@ -10,7 +10,7 @@ public class TesteGoogle {
 	@Test
 	public void teste() {
 		WebDriver driver = new ChromeDriver();
-//		driver.manage().window().setPosition(new Point(100, 100)); //Posição do Navegador
+//		driver.manage().window().setPosition(new Point(100, 100)); //Posiï¿½ï¿½o do Navegador
 //		driver.manage().window().setSize(new Dimension(1200, 765)); // Dimensionamento Navegador
 //		driver.manage().window().maximize(); // Maximizado
 		driver.get("https://www.google.com");
