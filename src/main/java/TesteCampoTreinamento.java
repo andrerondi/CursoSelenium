@@ -23,4 +23,22 @@ public class TesteCampoTreinamento {
 		Assert.assertEquals("teste", driver.findElement(By.id("elementosForm:sugestoes")).getAttribute("value"));
 		driver.quit();
 	}
+
+	@Test
+	public void deveInteragirComRadioButton(){
+		WebDriver driver = new ChromeDriver();
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.findElement(By.id("elementosForm:sexo:0")).click();
+		Assert.assertTrue(driver.findElement(By.id("elementosForm:sexo:0")).isSelected());
+		driver.quit();
+	}
+
+	@Test
+	public void deveInteragirComCheckbox(){
+		WebDriver driver = new ChromeDriver();
+		driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+		driver.findElement(By.id("elementosForm:comidaFavorita:2")).click();
+		Assert.assertTrue(driver.findElement(By.id("elementosForm:comidaFavorita:2")).isSelected());
+		driver.quit();
+	}
 }
